@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Jameel Hassan"
-  avatar           : "profile.png"
+  avatar           : "JameelHassan.jpg"
   bio              : "Grad Student in Computer Vision"
   location         : "Abu Dhabi, UAE"
   employer         :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "jh_jameelhassan"
   vine             :
   weibo            :
   xing             :
