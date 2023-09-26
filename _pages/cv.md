@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Jameel Hassan"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -11,9 +11,10 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* **M.S. in Computer Vision** - CGPA 3.94/4.0 <br>
+  Mohamed Bin Zayed University of Artificial Intelligence 2024
+* **B.Sc. in Electrical & Electronics Engineering** - CGPA 3.65/4.0 <br>
+  University of Peradeniya 2020.
 
 Work experience
 ======
