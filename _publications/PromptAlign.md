@@ -1,7 +1,7 @@
 ---
 title: "Align Your Prompts: Test-Time Prompting with Distribution Alignment for Zero-Shot Generalization"
 collection: publications
-permalink: /publications/PromptAlign
+permalink: /publication/PromptAlign
 excerpt: 'Test-Time Adaptation of Foundational Vision-Language models'
 date: 2023-09-22
 venue: 'NeurIPS 2023'
