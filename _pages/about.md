@@ -27,4 +27,10 @@ Welcome to my homepage. It is under construction. Checkout my [LinkedIn](https:/
 * Former Machine Learning Engineer (Computer Vision) at VeracityAI, Sri Lanka.
 * Former Research Assistant at University of Peradeniya, Sri Lanka.
 * BSc. Engineering in Electrical and Electronics Engineering, supervised by [Prof. Janaka Ekanayake](https://scholar.google.com/citations?user=yqup6Q8AAAAJ&hl=en), [Prof. Roshan Godaliyadda](https://scholar.google.com/citations?user=6_XOJbsAAAAJ&hl=en) and [Prof. Parakrama Ekanayake](https://scholar.google.com/citations?user=uJvb7zwAAAAJ&hl=en).
-* I like writing, find my medium blog [here](https://jameel-hassan.medium.com) and check out my hobby crafts [here](https://jameelhassan.github.io/hobbies/).   
+* I like writing, find my medium blog [here](https://jameel-hassan.medium.com) and check out my hobby crafts [here](https://jameelhassan.github.io/hobbies/).
+
+Checkout my resume [here](https://jameelhassan.github.io/files/JameelHassan.pdf)
+
+### Recent Updates
+
+* Align Your Prompts: Test-Time Prompting with Distribution Alignment for Zero-Shot Generalization accepted to \[NeurIPS 2023\].
