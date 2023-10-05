@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/PromptAlign
 excerpt: 'Test-Time Adaptation of Foundational Vision-Language models'
 date: 2023-09-22
-venue: 'NeurIPS 2023'
+venue: 'NeurIPS'
 ---
 ### Test-Time adaptation of foundational Vision-Language models using prompt learning.
 
