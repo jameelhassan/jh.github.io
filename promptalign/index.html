@@ -200,6 +200,9 @@
                                 $\bm{p}$ represents the prompts that are updated and $l$ refers to the vision-backbone layers. \texttt{(b)} 
                                 Owing to the distribution matching via prompts, PromptAlign surpasses the existing state-of-the-art prompt 
                                 learning approaches on 8 out of 10 datasets in cross-dataset generalization benchmarks.
+
+                                PromptAlign matches the distribution statistics **μₗ(𝒯 ; 𝐩)**, **σ²ₗ(𝒯 ; 𝐩)**, obtained from multiple augmented views of a single test sample, with the source data distribution statistics **μ̂ₗ**, **σ̂²ₗ**. This effectively brings the test sample closer to the distribution of the source data, where the domain shift is denoted by $\blacktriangle_{1}$ → $\blacktriangle_{2}$. **𝒯** denotes the distribution of the test sample, **𝐩** represents the prompts that are updated, and **𝑙** refers to the vision-backbone layers. *(b)* Owing to the distribution matching via prompts, PromptAlign surpasses the existing state-of-the-art prompt learning approaches on 8 out of 10 datasets in cross-dataset generalization benchmarks.
+
                             </p>
                         </div>
                     </div>
