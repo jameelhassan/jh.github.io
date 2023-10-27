@@ -275,11 +275,16 @@
                             PromptAlign explicitly aligns the token disctribution statistics for each test sample with that of the source data
                             statistics. The source data statistics are computed using ImageNet as a proxy dataset, given by: 
                         </p>
-                        <p class="equation">
-                            <script type="math/tex">
-                                 \bm{\hat{\mu}}_{l} =  \bm{\mu}_{l}(\mathcal{D}, {\theta}_v)  \quad  \text{and} \quad  \bm{\hat{\sigma}^2}_{l} =  \bm{\sigma}^2_{l}(\mathcal{D}, {\theta}_v) \quad
+<!--                         <p class="equation">
+                            \begin{align}
+                                 {\hat{\mu}}_{l} =  {\mu}_{l}(\mathcal{D}, {\theta}_v)  \quad  \text{and} \quad  {\hat{\sigma}^2}_{l} =  {\sigma}^2_{l}(\mathcal{D}, {\theta}_v) \quad
                                 \label{eq:source-stats}
-                            </script>
+                            \end{align}
+                        </p> -->
+                        <p class="equation">
+                            <span style="white-space: nowrap;">
+                                \(\hat{\mu}_{l} = \mu_{l}(\mathcal{D}, \theta_v)\) and \(\hat{\sigma^2}_{l} = \sigma^2_{l}(\mathcal{D}, \theta_v)\)
+                            </span>
                         </p>
                         
                         <p class="equation-text">
@@ -287,12 +292,18 @@
                             distribution statistics -- mean and variance -- are computed as:
                         </p>
                         
-                        <p class="equation">
-                            <script type="math/tex">
-                                \bm{\mu}_{l}(\mathcal{T} ; \bm{p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)}  \bm{\Tilde{X}^p}_{l, \mathrm{x}} \quad ,
-                                \bm{\sigma^2}_{l}(\mathcal{T} ; \bm{p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)} \bigg(\bm{\Tilde{X}^p}_{l, \mathrm{x}} - \bm{\mu}_{l}(\mathcal{T} ; \bm{p})\bigg)^2 ,
+<!--                         <p class="equation">
+                            \begin{align}
+                                {\mu}_{l}(\mathcal{T} ; {p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)}  {\Tilde{X}^p}_{l, \mathrm{x}} \quad ,
+                                {\sigma^2}_{l}(\mathcal{T} ; {p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)} \bigg({\Tilde{X}^p}_{l, \mathrm{x}} - {\mu}_{l}(\mathcal{T} ; {p})\bigg)^2 ,
                                 \label{eq:test-stats}
-                            </script>
+                            \end{align}
+                        </p> -->
+                        <p class="equation">
+                            <span style="white-space: nowrap;">
+                                \(\mu_{l}(\mathcal{T} ; {p}) = \frac{1}{N_k} \sum_{x \in \mathcal{H}(X)} \Tilde{X^p}_{l, x}\) ,
+                                \(\sigma^2_{l}(\mathcal{T} ; {p}) = \frac{1}{N_k} \sum_{x \in \mathcal{H}(X)} \bigg(\Tilde{X^p}_{l, x} - \mu_{l}(\mathcal{T} ; {p})\bigg)^2\)
+                            </span>
                         </p>
                         <p class="equation-text">
                             The distribution alignment loss is computed between the offline computed source data statistics and the test sample 
@@ -303,7 +314,7 @@
                         <p class="equation">
                             <script type="math/tex">
                                 \label{eq:align-loss}
-                                \mathcal{L}_{\text{align}} = \frac{1}{L}\sum_{l=1}^{L} \bigg( \|  \bm{\mu}_{l}(\mathcal{T} ; \bm{p}) - \bm{\hat{\mu}}_{l} \|_1  +  \| \bm{\sigma^2}_{l}(\mathcal{T} ; \bm{p}) -   \bm{\hat{\sigma}^2}_{l}\|_1 \bigg).
+                                \mathcal{L}_{\text{align}} = \frac{1}{L}\sum_{l=1}^{L} \bigg( \|  {\mu}_{l}(\mathcal{T} ; {p}) - {\hat{\mu}}_{l} \|_1  +  \| {\sigma^2}_{l}(\mathcal{T} ; {p}) -   {\hat{\sigma}^2}_{l}\|_1 \bigg).
                             </script>
                         </p>
                         
