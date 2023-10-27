@@ -285,6 +285,19 @@
                             distribution shift is combined with the entropy loss to update the multi-modal prompts. For each sample, a single update
                             of the prompts are done, and it is reset to the original prompts for the next sample. 
                         </p>
+                        <p class="equation">
+                            \begin{align}
+                                 \bm{\hat{\mu}}_{l} =  \bm{\mu}_{l}(\mathcal{D}, {\theta}_v)  \quad  \text{and} \quad  \bm{\hat{\sigma}^2}_{l} =  \bm{\sigma}^2_{l}(\mathcal{D}, {\theta}_v) \quad
+                                \label{eq:source-stats}
+                            \end{align}
+                        </p>
+                        <p class="equation">
+                            \begin{align}
+                                \bm{\mu}_{l}(\mathcal{T} ; \bm{p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)}  \bm{\Tilde{X}^p}_{l, \mathrm{x}} \quad ,
+                                \bm{\sigma^2}_{l}(\mathcal{T} ; \bm{p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)} \bigg(\bm{\Tilde{X}^p}_{l, \mathrm{x}} - \bm{\mu}_{l}(\mathcal{T} ; \bm{p})\bigg)^2 ,
+                                \label{eq:test-stats}
+                            \end{align}
+                        </p>
                     </div>
                 </div>
             </div>
