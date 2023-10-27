@@ -141,30 +141,15 @@
                                 </a>
                             </button>
                             <button class="external-link button is-medium is-ghost publication-links is-rounded">
-                                <a href="./static/docs/DiffusionClassifier.pdf" target="_blank">
+                                <a href="" target="_blank">
                                     <span class="icon is-small">
                                         <i class="fas fa-file-pdf"></i>
                                     </span>
                                     <span>pdf</span>
                                 </a>
                             </button>
-                            <!-- <button class="external-link button is-medium is-ghost publication-links is-rounded">
-                                <a href="https://youtu.be/1hYtGZ0CUSA" target="_blank">
-                                    <span class="icon">
-                                        <i class="fab fa-youtube"></i>
-                                    </span><span>video</span>
-                                </a>
-                            </button> -->
-                            <!-- <button class="external-link button is-medium is-ghost publication-links is-rounded">
-                                <a href="./static/docs/InternetExplorer.pptx" target="_blank">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-file-powerpoint"></i>
-                                    </span>
-                                    <span>slides</span>
-                                </a>
-                            </button> -->
                             <button class="external-link button is-medium is-ghost publication-links is-rounded">
-                                <a href="https://github.com/diffusion-classifier/diffusion-classifier" target="_blank">
+                                <a href="https://github.com/jameelhassan/PromptAlign" target="_blank">
                                     <span class="icon is-small">
                                         <i class="fab fa-github"></i>
                                     </span>
@@ -272,72 +257,33 @@
             <div class="columns is-centered has-text-centered">
                 <div class="column is-three-quarters">
                     <h2 class="title is-3">
-                        Update with tables!!
+                        Architectural design of PromptAlign
                     </h2>
+
+                    <p style="padding: 10px;" />
+                    <div class="container is-max-desktop">
+                        <div class="columns is-centered has-text-centered">
+                            <div class="column is-three-fourths">
+                                <figure>
+                                    <img src="./static/images/arch.png" alt="PromptAlign design" id="design-image"
+                                        draggable="false" />
+                                    <figcaption>
+                                        Architecture and design of PromptAlign.
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="content has-text-justified">
                         <p class="equation-text">
-                            In general, classification using a conditional generative model can be done by using Bayes'
-                            theorem on the model predictions and the prior \(p(\mathbf{c})\) over labels
-                            \(\{\mathbf{c}_i\}\):
-                        </p>
-                        <p class="equation">
-                            \begin{equation}
-                            p_\theta(\mathbf{c}_i \mid \mathbf{x}) = \frac{p(\mathbf{c}_i)\ p_\theta(\mathbf{x} \mid
-                            \mathbf{c}_i)}{\sum_j p(\mathbf{c}_j)\ p_\theta(\mathbf{x} \mid \mathbf{c}_j)}
-                            \label{eq:bayes}
-                            \end{equation}
-                        </p>
-                        <p class="equation-text">
-                            A uniform prior over \(\{\mathbf{c}_i\}\) (<i>i.e.,</i> \(p(\mathbf{c}_i) = \frac{1}{N}\))
-                            is natural and leads to all of the \(p(\mathbf{c})\) terms cancelling. For diffusion models,
-                            computing \(\log p_\theta(\mathbf{x}\mid \mathbf{c})\) is intractable, so we approximate it
-                            with the ELBO (see paper &sect3.1), from which we have dropped constant and weighting terms:
-                        </p>
-                        <p class="equation">
-                            \begin{align}
-                            \text{ELBO} \approx - \mathbb{E}_{t, \epsilon}[\|\epsilon - \epsilon_\theta(\mathbf{x}_t,
-                            \mathbf{c}_i)\|^2]
-                            \label{eq:elbo}
-                            \end{align}
-                        </p>
-                        <p class="equation-text">
-                            We plug the modified ELBO Eq.&nbsp\ref{eq:elbo} into Eq.&nbsp\ref{eq:bayes} to obtain the
-                            posterior over
-                            \(\{\mathbf{c}_i\}_{i=1}^N\):
-                        </p>
-                        <p class="equation">
-                            \begin{align}
-                            p_\theta(\mathbf{c}_i \mid \mathbf{x})
-                            &\approx \frac{\exp\{- \mathbb{E}_{t, \epsilon}[\|\epsilon - \epsilon_\theta(\mathbf{x}_t,
-                            \mathbf{c}_i)\|^2]\}}{\sum_j \exp\{- \mathbb{E}_{t, \epsilon}[\|\epsilon -
-                            \epsilon_\theta(\mathbf{x}_t, \mathbf{c}_j)\|^2]\}}
-                            \label{eq:posterior}
-                            \end{align}
-                        </p>
-                        <p class="equation-text">
-                            We compute an unbiased Monte Carlo estimate of each expectation by sampling \(N\) \((t_i,
-                            \epsilon_i)\) pairs, with \(t_i \sim [1, 1000]\) and \(\epsilon \sim \mathcal{N}(0, I)\),
-                            and computing
-                        </p>
-                        <p class="equation">
-                            \begin{align}
-                            \frac{1}{N}\sum_{i=1}^N \left\|\epsilon_i - \epsilon_\theta(\sqrt{\bar
-                            \alpha_{t_i}}\mathbf{x} + \sqrt{1-\bar\alpha_{t_i}} \epsilon_i, \mathbf{c}_j)\right\|^2
-                            \label{eq:monte_carlo}
-                            \end{align}
-                        </p>
-                        <p class="equation-text">
-                            By plugging Eq.&nbsp;\ref{eq:monte_carlo} into Eq.&nbsp;\ref{eq:posterior}, we can extract a
-                            classifier from <i>any</i> conditional diffusion model.
-                            This method, which we call <span class="method-name">Diffusion Classifier</span>, is a
-                            <i>powerful, hyperparameter-free approach that leverages pretrained diffusion models for
-                                classification without any additional training.</i>
-                            Diffusion Classifier can be used to extract a zero-shot
-                            classifier from a text-to-image model like <a target="_blank"
-                                href="https://github.com/Stability-AI/stablediffusion">Stable Diffusion</a>, to extract
-                            a standard
-                            classifier from a class-conditional diffusion model like <a target="_blank"
-                                href="https://arxiv.org/abs/2212.09748">DiT</a>, and so on.
+                            PromptAlign explicitly aligns the token disctribution statistics for each test sample with that of the source data
+                            statistics. The source data statistics are computed using ImageNet as a proxy dataset. At test time, multiple augmented
+                            views of the sample are passed through the CLIP model and the token distribution statistics -- mean and variance -- are
+                            computed for it. The distribution alignment loss is computed between the offline computed source data statistics and 
+                            the test sample statistics across the transformer layers for all tokens. The resulting alignment loss from the 
+                            distribution shift is combined with the entropy loss to update the multi-modal prompts. For each sample, a single update
+                            of the prompts are done, and it is reset to the original prompts for the next sample. 
                         </p>
                     </div>
                 </div>
