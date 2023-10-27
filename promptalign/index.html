@@ -324,6 +324,7 @@
                         <th>Imagenet R</th>
                         <th>OOD Avg.</th>
                     </tr>
+                        <td colspan="6" style="border-bottom: 1px solid #ddd;"></td>
                     <tr>
                         <td>MaPLe</td>
                         <td>64.07</td>
@@ -371,10 +372,10 @@
                         <th>DTD</th>
                         <th>EuroSAT</th>
                         <th>UCF101</th>
-                        <th><em>Average</em></th>
+                        <th>Average</th>
                     </tr>
                     <tr>
-                        <td>CLIP</td>
+                        <td>CLIP <cite>radford2021learning</cite></td>
                         <td>93.35</td>
                         <td>88.25</td>
                         <td>65.48</td>
@@ -384,23 +385,25 @@
                         <td>62.59</td>
                         <td>44.27</td>
                         <td>42.01</td>
+                        <td>65.13</td>
                         <td>63.58</td>
                     </tr>
                     <tr>
-                        <td>CLIP+TPT</td>
-                        <td style="color:lime">94.16</td>
+                        <td>CLIP+TPT <cite>shu2022test</cite></td>
+                        <td><strong>94.16</strong></td>
                         <td>87.79</td>
                         <td>66.87</td>
                         <td>68.98</td>
                         <td>84.67</td>
                         <td>24.78</td>
                         <td>65.50</td>
-                        <td style="color:lime">47.75</td>
+                        <td><strong>47.75</strong></td>
                         <td>42.44</td>
-                        <td style="color:lime">65.10</td>
+                        <td>68.04</td>
+                        <td>65.10</td>
                     </tr>
                     <tr>
-                        <td>CoOp</td>
+                        <td>CoOp <cite>zhou2022coop</cite></td>
                         <td>93.70</td>
                         <td>89.14</td>
                         <td>64.51</td>
@@ -410,175 +413,54 @@
                         <td>64.15</td>
                         <td>41.92</td>
                         <td>46.39</td>
+                        <td>66.55</td>
                         <td>63.88</td>
                     </tr>
                     <tr>
-                        <td>CoCoOp</td>
+                        <td>CoCoOp <cite>zhou2022cocoop</cite></td>
                         <td>93.79</td>
-                        <td style="color:lime">90.46</td>
+                        <td><strong>90.46</strong></td>
                         <td>64.90</td>
-                        <td style="color:lime">70.85</td>
-                        <td>83.97</td>
-                        <td style="color:lime">22.29</td>
-                        <td style="color:lime">66.89</td>
-                        <td style="color:lime">45.45</td>
+                        <td><strong>70.85</strong></td>
+                        <td><strong>83.97</strong></td>
+                        <td>22.29</td>
+                        <td><strong>66.89</strong></td>
+                        <td>45.45</td>
                         <td>39.23</td>
+                        <td>68.44</td>
                         <td>64.63</td>
                     </tr>
                     <tr>
-                        <td>ProDA</td>
+                        <td>ProDA <cite>zhang2021prototypical</cite></td>
                         <td>86.70</td>
                         <td>88.20</td>
                         <td>60.10</td>
-                        <td style="color:lime">77.50</td>
+                        <td>77.50</td>
                         <td>80.80</td>
-                        <td style="color:lime">22.20</td>
+                        <td>22.20</td>
                         <td>-</td>
-                        <td style="color:lime">50.90</td>
-                        <td style="color:lime">58.50</td>
+                        <td>50.90</td>
+                        <td>58.50</td>
                         <td>-</td>
                         <td>65.62</td>
                     </tr>
                     <tr>
                         <td>MaPLe</td>
                         <td>93.53</td>
-                        <td style="color:lime">90.49</td>
+                        <td><strong>90.49</strong></td>
                         <td>65.57</td>
-                        <td style="color:lime">72.23</td>
-                        <td>86.20</td>
-                        <td style="color:lime">24.74</td>
-                        <td style="color:lime">67.01</td>
-                        <td style="color:lime">46.49</td>
-                        <td style="color:lime">48.06</td>
-                        <td style="color:lime">66.30</td>
+                        <td><strong>72.23</strong></td>
+                        <td><strong>86.20</strong></td>
+                        <td>24.74</td>
+                        <td><strong>67.01</strong></td>
+                        <td><strong>46.49</strong></td>
+                        <td><strong>48.06</strong></td>
+                        <td>68.69</td>
+                        <td><strong>66.30</strong></td>
                     </tr>
                     <tr>
                         <td>MaPLe+TPT</td>
-                        <td>93.59</td>
-                        <td style="color:lime">90.72</td>
-                        <td>66.50</td>
-                        <td style="color:lime">72.37</td>
-                        <td>86.64</td>
-                        <td style="color:lime">24.70</td>
-                        <td style="color:lime">67.54</td>
-                        <td style="color:lime">45.87</td>
-                        <td style="color:lime">47.80</td>
-                        <td style="color:lime">69.19</td>
-                        <td style="color:lime">66.50</td>
-                    </tr>
-                    <tr>
-                        <td style="background-color:#FFFFCC">PromptAlign</td>
-                        <td style="background-color:#FFFFCC">94.01</td>
-                        <td style="background-color:#FFFFCC">90.76</td>
-                        <td style="background-color:#FFFFCC">68.50</td>
-                        <td style="background-color:#FFFFCC">72.39</td>
-                        <td style="background-color:#FFFFCC">86.65</td>
-                        <td style="background-color:#FFFFCC">24.80</td>
-                        <td style="background-color:#FFFFCC">67.54</td>
-                        <td style="background-color:#FFFFCC">47.24</td>
-                        <td style="background-color:#FFFFCC">47.86</td>
-                        <td style="background-color:#FFFFCC">69.47</td>
-                        <td style="background-color:#FFFFCC">66.92</td>
-                    </tr>
                 </table>
-
-<!--                 <table style="width:100%">
-                    <caption>
-                        Zero-shot classification performance on a suite of tasks.
-                    </caption>
-                    <tr>
-                        <th></th>
-                        <th>Caltech</th>
-                        <th>Zero-shot?</th>
-                        <th>Zero-shot?</th>
-                        <th>Food</th>
-                        <th>CIFAR10</th>
-                        <th>FGVC</th>
-                        <th>Pets</th>
-                        <th>Flowers</th>
-                        <th>STL10</th>
-                        <th>ImageNet</th>
-                        <th>ObjectNet</th>
-                    </tr>
-                    <tr>
-                        <td colspan="11" style="border-bottom: 1px solid #ddd;"></td>
-                    </tr>
-                    <tr>
-                        <td>Synthetic SD Data</td>
-                        <!-- <td>&#10003;</td> -->
-                        <td style="color:lime">&#10003;</td>
-                        <td>12.6</td>
-                        <td>12.6</td>
-                        <td>12.6</td>
-                        <td>35.3</td>
-                        <!-- add spaces to make it render inline -->
-                        <td>&nbsp;&nbsp;&nbsp;9.4</td>
-                        <td>31.3</td>
-                        <td>22.1</td>
-                        <td>38.0</td>
-                        <td>18.9</td>
-                        <td>&nbsp;&nbsp;&nbsp;5.2</td>
-                    </tr>
-                    <tr>
-                        <td>SD Features</td>
-                        <td style="color:red">&#10007;</td>
-                        <td style="color:lightgray">73.0</td>
-                        <td style="color:lightgray">73.0</td>
-                        <td style="color:lightgray">73.0</td>
-                        <td style="color:lightgray">84.0</td>
-                        <td style="color:lightgray"><b>35.2</b></td>
-                        <td style="color:lightgray">75.9</td>
-                        <td style="color:lightgray"><b>70.0</b></td>
-                        <td style="color:lightgray">87.2</td>
-                        <td style="color:lightgray">56.6</td>
-                        <td style="color:lightgray">10.2</td>
-                    </tr>
-                    <tr>
-                        <td><span class="method-name">Diffusion Classifier</span></td>
-                        <td style="color:lime">&#10003;</td>
-                        <td><b>77.7</b></td>
-                        <td><b>77.7</b></td>
-                        <td><b>77.7</b></td>
-                        <td><b>88.5</b></td>
-                        <td>26.4</td>
-                        <td><b>87.3</b></td>
-                        <td>66.3</td>
-                        <td><b>95.4</b></td>
-                        <td><b>61.4</b></td>
-                        <td><b>43.4</b></td>
-                    </tr>
-                    <tr>
-                        <td colspan="11" style="border-bottom: 1px solid #ddd;"></td>
-                    </tr>
-                    <tr>
-                        <td>CLIP ResNet50</td>
-                        <td style="color:lime">&#10003;</td>
-                        <td>81.1</td>
-                        <td>81.1</td>
-                        <td>81.1</td>
-                        <td>75.6</td>
-                        <td>19.3</td>
-                        <td>85.4</td>
-                        <td>65.9</td>
-                        <td>94.3</td>
-                        <td>58.2</td>
-                        <td>40.0</td>
-                    </tr>
-                    <tr>
-                        <td>OpenCLIP ViT-H/14</td>
-                        <td style="color:lime">&#10003;</td>
-                        <td>92.7</td>
-                        <td>97.3</td>
-                        <td>97.3</td>
-                        <td>97.3</td>
-                        <td>42.3</td>
-                        <td>94.6</td>
-                        <td>79.9</td>
-                        <td>98.3</td>
-                        <td>76.8</td>
-                        <td>69.2</td>
-                    </tr>
-                </table> -->
             </div>
         </div>
         <!--/ Results. -->
