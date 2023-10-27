@@ -273,11 +273,6 @@
                                 \label{eq:source-stats}
                             \end{align}
                         </p>
-                        <p class="equation">
-                            \begin{align}
-                                \hat{\mu}_{l} = \mu_{l}(\mathcal{D}, \theta_v) \quad and \quad \hat{\sigma^2}_{l} = \sigma^2_{l}(\mathcal{D}, \theta_v)
-                            \end{align}
-                        </p>
                         
                         <p class="equation-text">
                             At test time, multiple augmented views of the sample are passed through the CLIP model and the token 
@@ -299,8 +294,8 @@
                         </p>
                         <p class="equation">
                             \begin{align}
-                                \label{eq:align-loss}
                                 \mathcal{L}_{\text{align}} = \frac{1}{L}\sum_{l=1}^{L} \bigg( \|  {\mu}_{l}(\mathcal{T} ; {p}) - {\hat{\mu}}_{l} \|_1  +  \| {\sigma^2}_{l}(\mathcal{T} ; {p}) -   {\hat{\sigma}^2}_{l}\|_1 \bigg).
+                                \label{eq:align-loss}
                             \end{align}
                         </p>
                         
