@@ -258,20 +258,20 @@
                         
                         <p class="equation-text">
                             At test time, multiple augmented views of the sample are passed through the CLIP model and the token 
-                            distribution statistics -- mean and variance -- are computed as in Eq.&nbsp\ref{eq:test-stats}, where 
+                            distribution statistics -- mean and variance -- are computed as in Eq.\ref{eq:test-stats}, where 
                             \(\bigg({{X~}^p}_{l, \mathrm{x}}\) is the prompt token embeddings at layer 𝑙.
                         </p>
                         
                         <p class="equation">
                             \begin{align}
-                                {\mu}_{l}(\mathcal{T} ; {p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)}  {{X ~}^p}_{l, \mathrm{x}} \quad ,
+                                {\mu}_{l}(\mathcal{T} ; {p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)}  {{X ~}^p}_{l, \mathrm{x}} \quad,
                                 {\sigma^2}_{l}(\mathcal{T} ; {p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)} \bigg({{X ~}^p}_{l, \mathrm{x}} - {\mu}_{l}(\mathcal{T} ; {p})\bigg)^2 ,
                                 \label{eq:test-stats}
                             \end{align}
                         </p>
                         <p class="equation-text">
                             The distribution alignment loss is computed between the offline computed source data statistics and the test sample 
-                            statistics across the transformer layers for all tokens as in Eq.&nbsp\ref{eq:align-loss}. The resulting alignment loss from the 
+                            statistics across the transformer layers for all tokens as in Eq.\ref{eq:align-loss}. The resulting alignment loss from the 
                             distribution shift is combined with the entropy loss to update the multi-modal prompts. For each sample, a single 
                             update of the prompts are done, and it is reset to the original prompts for the next sample.
                         </p>
@@ -310,131 +310,177 @@
         <div class="is-centered has-text-centered">
             <div class="table-container is-max-desktop">
                 <table style="width:100%">
-    <caption>
-        Comparison of PromptAlign in cross-dataset evaluation. Prompt learning methods are trained on ImageNet and evaluated on cross-datasets.
-    </caption>
-    <tr>
-        <th></th>
-        <th>Caltech</th>
-        <th>Pets</th>
-        <th>Cars</th>
-        <th>Flowers</th>
-        <th>Food101</th>
-        <th>Aircraft</th>
-        <th>SUN397</th>
-        <th>DTD</th>
-        <th>EuroSAT</th>
-        <th>UCF101</th>
-        <th><em>Average</em></th>
-    </tr>
-    <tr>
-        <td>CLIP</td>
-        <td>93.35</td>
-        <td>88.25</td>
-        <td>65.48</td>
-        <td>67.44</td>
-        <td>83.65</td>
-        <td>23.67</td>
-        <td>62.59</td>
-        <td>44.27</td>
-        <td>42.01</td>
-        <td>63.58</td>
-    </tr>
-    <tr>
-        <td>CLIP+TPT</td>
-        <td style="color:lime">94.16</td>
-        <td>87.79</td>
-        <td>66.87</td>
-        <td>68.98</td>
-        <td>84.67</td>
-        <td>24.78</td>
-        <td>65.50</td>
-        <td style="color:lime">47.75</td>
-        <td>42.44</td>
-        <td style="color:lime">65.10</td>
-    </tr>
-    <tr>
-        <td>CoOp</td>
-        <td>93.70</td>
-        <td>89.14</td>
-        <td>64.51</td>
-        <td>68.71</td>
-        <td>85.30</td>
-        <td>18.47</td>
-        <td>64.15</td>
-        <td>41.92</td>
-        <td>46.39</td>
-        <td>63.88</td>
-    </tr>
-    <tr>
-        <td>CoCoOp</td>
-        <td>93.79</td>
-        <td style="color:lime">90.46</td>
-        <td>64.90</td>
-        <td style="color:lime">70.85</td>
-        <td>83.97</td>
-        <td style="color:lime">22.29</td>
-        <td style="color:lime">66.89</td>
-        <td style="color:lime">45.45</td>
-        <td>39.23</td>
-        <td>64.63</td>
-    </tr>
-    <tr>
-        <td>ProDA</td>
-        <td>86.70</td>
-        <td>88.20</td>
-        <td>60.10</td>
-        <td style="color:lime">77.50</td>
-        <td>80.80</td>
-        <td style="color:lime">22.20</td>
-        <td>-</td>
-        <td style="color:lime">50.90</td>
-        <td style="color:lime">58.50</td>
-        <td>-</td>
-        <td>65.62</td>
-    </tr>
-    <tr>
-        <td>MaPLe</td>
-        <td>93.53</td>
-        <td style="color:lime">90.49</td>
-        <td>65.57</td>
-        <td style="color:lime">72.23</td>
-        <td>86.20</td>
-        <td style="color:lime">24.74</td>
-        <td style="color:lime">67.01</td>
-        <td style="color:lime">46.49</td>
-        <td style="color:lime">48.06</td>
-        <td style="color:lime">66.30</td>
-    </tr>
-    <tr>
-        <td>MaPLe+TPT</td>
-        <td>93.59</td>
-        <td style="color:lime">90.72</td>
-        <td>66.50</td>
-        <td style="color:lime">72.37</td>
-        <td>86.64</td>
-        <td style="color:lime">24.70</td>
-        <td style="color:lime">67.54</td>
-        <td style="color:lime">45.87</td>
-        <td style="color:lime">47.80</td>
-        <td style="color:lime">69.19</td>
-        <td style="color:lime">66.50</td>
-    </tr>
-    <tr>
-        <td style="background-color:#FFFFCC">PromptAlign</td>
-        <td style="background-color:#FFFFCC">94.01</td>
-        <td style="background-color:#FFFFCC">90.76</td>
-        <td style="background-color:#FFFFCC">68.50</td>
-        <td style="background-color:#FFFFCC">72.39</td>
-        <td style="background-color:#FFFFCC">86.65</td>
-        <td style="background-color:#FFFFCC">24.80</td>
-        <td style="background-color:#FFFFCC">67.54</td>
-        <td style="background-color:#FFFFCC">47.24</td>
-        <td style="background-color:#FFFFCC">47.86</td>
-        <td style="background-color:#FFFFCC">69.47</td>
-        <td style="background-color:#FFFFCC">66.92</td>
-    </tr>
-</table>
+                    <caption>
+                        Effect of token distribution alignment strategy for domain generalization. The base model MaPLe is trained on ImageNet and evaluated on datasets with domain shifts.
+                    </caption>
+                    
+                    <small style="text-align:center; display:block;"> </small>
+                    
+                    <tr>
+                        <th></th>
+                        <th>Imagenet V2</th>
+                        <th>Imagenet Sketch</th>
+                        <th>Imagenet A</th>
+                        <th>Imagenet R</th>
+                        <th>OOD Avg.</th>
+                    </tr>
+                    <tr>
+                        <td>MaPLe</td>
+                        <td>64.07</td>
+                        <td>49.15</td>
+                        <td>50.90</td>
+                        <td>76.98</td>
+                        <td>60.28</td>
+                    </tr>
+                    <tr>
+                        <td>MaPLe+TPT</td>
+                        <td>64.87</td>
+                        <td>48.16</td>
+                        <td>58.08</td>
+                        <td>78.12</td>
+                        <td>62.31</td>
+                    </tr>
+                    <tr style="background-color:#FFFFCC">
+                        <td>PromptAlign</td>
+                        <td><b>65.29</b></td>
+                        <td><b>50.23</b></td>
+                        <td><b>59.37</b></td>
+                        <td><b>79.33</b></td>
+                        <td><b>63.55</b></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <p style="padding: 20px;" />
+        <div class="is-centered has-text-centered">
+            <div class="table-container is-max-desktop">
+                <table style="width:100%">
+                    <caption>
+                        Comparison of PromptAlign in cross-dataset evaluation.
+                    </caption>
+                    <tr>
+                        <th></th>
+                        <th>Caltech</th>
+                        <th>Pets</th>
+                        <th>Cars</th>
+                        <th>Flowers</th>
+                        <th>Food101</th>
+                        <th>Aircraft</th>
+                        <th>SUN397</th>
+                        <th>DTD</th>
+                        <th>EuroSAT</th>
+                        <th>UCF101</th>
+                        <th><em>Average</em></th>
+                    </tr>
+                    <tr>
+                        <td>CLIP</td>
+                        <td>93.35</td>
+                        <td>88.25</td>
+                        <td>65.48</td>
+                        <td>67.44</td>
+                        <td>83.65</td>
+                        <td>23.67</td>
+                        <td>62.59</td>
+                        <td>44.27</td>
+                        <td>42.01</td>
+                        <td>63.58</td>
+                    </tr>
+                    <tr>
+                        <td>CLIP+TPT</td>
+                        <td style="color:lime">94.16</td>
+                        <td>87.79</td>
+                        <td>66.87</td>
+                        <td>68.98</td>
+                        <td>84.67</td>
+                        <td>24.78</td>
+                        <td>65.50</td>
+                        <td style="color:lime">47.75</td>
+                        <td>42.44</td>
+                        <td style="color:lime">65.10</td>
+                    </tr>
+                    <tr>
+                        <td>CoOp</td>
+                        <td>93.70</td>
+                        <td>89.14</td>
+                        <td>64.51</td>
+                        <td>68.71</td>
+                        <td>85.30</td>
+                        <td>18.47</td>
+                        <td>64.15</td>
+                        <td>41.92</td>
+                        <td>46.39</td>
+                        <td>63.88</td>
+                    </tr>
+                    <tr>
+                        <td>CoCoOp</td>
+                        <td>93.79</td>
+                        <td style="color:lime">90.46</td>
+                        <td>64.90</td>
+                        <td style="color:lime">70.85</td>
+                        <td>83.97</td>
+                        <td style="color:lime">22.29</td>
+                        <td style="color:lime">66.89</td>
+                        <td style="color:lime">45.45</td>
+                        <td>39.23</td>
+                        <td>64.63</td>
+                    </tr>
+                    <tr>
+                        <td>ProDA</td>
+                        <td>86.70</td>
+                        <td>88.20</td>
+                        <td>60.10</td>
+                        <td style="color:lime">77.50</td>
+                        <td>80.80</td>
+                        <td style="color:lime">22.20</td>
+                        <td>-</td>
+                        <td style="color:lime">50.90</td>
+                        <td style="color:lime">58.50</td>
+                        <td>-</td>
+                        <td>65.62</td>
+                    </tr>
+                    <tr>
+                        <td>MaPLe</td>
+                        <td>93.53</td>
+                        <td style="color:lime">90.49</td>
+                        <td>65.57</td>
+                        <td style="color:lime">72.23</td>
+                        <td>86.20</td>
+                        <td style="color:lime">24.74</td>
+                        <td style="color:lime">67.01</td>
+                        <td style="color:lime">46.49</td>
+                        <td style="color:lime">48.06</td>
+                        <td style="color:lime">66.30</td>
+                    </tr>
+                    <tr>
+                        <td>MaPLe+TPT</td>
+                        <td>93.59</td>
+                        <td style="color:lime">90.72</td>
+                        <td>66.50</td>
+                        <td style="color:lime">72.37</td>
+                        <td>86.64</td>
+                        <td style="color:lime">24.70</td>
+                        <td style="color:lime">67.54</td>
+                        <td style="color:lime">45.87</td>
+                        <td style="color:lime">47.80</td>
+                        <td style="color:lime">69.19</td>
+                        <td style="color:lime">66.50</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:#FFFFCC">PromptAlign</td>
+                        <td style="background-color:#FFFFCC">94.01</td>
+                        <td style="background-color:#FFFFCC">90.76</td>
+                        <td style="background-color:#FFFFCC">68.50</td>
+                        <td style="background-color:#FFFFCC">72.39</td>
+                        <td style="background-color:#FFFFCC">86.65</td>
+                        <td style="background-color:#FFFFCC">24.80</td>
+                        <td style="background-color:#FFFFCC">67.54</td>
+                        <td style="background-color:#FFFFCC">47.24</td>
+                        <td style="background-color:#FFFFCC">47.86</td>
+                        <td style="background-color:#FFFFCC">69.47</td>
+                        <td style="background-color:#FFFFCC">66.92</td>
+                    </tr>
+                </table>
 
 <!--                 <table style="width:100%">
                     <caption>
