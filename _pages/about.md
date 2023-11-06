@@ -33,4 +33,6 @@ Checkout my resume [here](https://jameelhassan.github.io/files/JameelHassan.pdf)
 
 ### Recent Updates
 
-* [Align Your Prompts](https://jameelhassan.github.io/publication/PromptAlign): Test-Time Prompting with Distribution Alignment for Zero-Shot Generalization accepted to NeurIPS 2023.
+* Serving as a reviewer for CVPR 2024. 
+* Paper and Code for [Align Your Prompts](https://jameelhassan.github.io/promptalign) realeased. 
+* [Align Your Prompts](https://jameelhassan.github.io/promptalign): Test-Time Prompting with Distribution Alignment for Zero-Shot Generalization accepted to NeurIPS 2023.
