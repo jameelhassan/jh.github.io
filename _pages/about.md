@@ -19,7 +19,7 @@ redirect_from:
 </script>
 
 
-**Seeking PhD opportunities**
+**I am currently seeking PhD opportunities :)**
 
 * MSc research student at MBZUAI, UAE supervised by [Prof. Salman Khan](https://scholar.google.com.pk/citations?user=M59O9lkAAAAJ&hl=en)
   and [Prof. Fahad Khan](https://scholar.google.com/citations?user=zvaeYnUAAAAJ&hl=en).
