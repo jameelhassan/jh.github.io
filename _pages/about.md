@@ -19,10 +19,11 @@ redirect_from:
 </script>
 
 
-Welcome to my homepage. It is under construction. Checkout my [LinkedIn](https://www.linkedin.com/in/jameelhassan/) for now
+**Seeking PhD opportunities**
 
 * MSc research student at MBZUAI, UAE supervised by [Prof. Salman Khan](https://scholar.google.com.pk/citations?user=M59O9lkAAAAJ&hl=en)
   and [Prof. Fahad Khan](https://scholar.google.com/citations?user=zvaeYnUAAAAJ&hl=en).
+* My primary focus lies at the intersection of machine learning and computer vision, particularly specializing in multi-modal learning and self-supervised learning methodologies. 
 * Summer research intern at Inception Institute of Artificial Intelligence, Abu Dhabi.
 * Former Machine Learning Engineer (Computer Vision) at VeracityAI, Sri Lanka.
 * Former Research Assistant at University of Peradeniya, Sri Lanka.
