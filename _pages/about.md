@@ -22,7 +22,7 @@ redirect_from:
 **I am currently seeking PhD opportunities :)**
 
 * MSc research student at MBZUAI, UAE supervised by [Prof. Salman Khan](https://scholar.google.com.pk/citations?user=M59O9lkAAAAJ&hl=en)
-  and [Prof. Fahad Khan](https://scholar.google.com/citations?user=zvaeYnUAAAAJ&hl=en).
+  and [Prof. Fahad Khan](https://scholar.google.com/citations?user=zvaeYnUAAAAJ&hl=en), mentored by [Dr. Muzammal Naseer](https://muzammal-naseer.netlify.app/).
 * My primary focus lies at the intersection of machine learning and computer vision, particularly specializing in multi-modal learning and self-supervised learning towards building robust and generalizable deep learning models. 
 * Summer research intern at Inception Institute of Artificial Intelligence, Abu Dhabi.
 * Former Machine Learning Engineer (Computer Vision) at VeracityAI, Sri Lanka.
