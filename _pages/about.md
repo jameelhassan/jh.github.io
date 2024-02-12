@@ -18,8 +18,6 @@ redirect_from:
   gtag('config', 'G-W3Q11QFD2Y');
 </script>
 
-**I am currently looking for fulltime roles :)**
-
 * MSc research student at MBZUAI, UAE supervised by [Prof. Salman Khan](https://scholar.google.com.pk/citations?user=M59O9lkAAAAJ&hl=en)
   and [Prof. Fahad Khan](https://scholar.google.com/citations?user=zvaeYnUAAAAJ&hl=en), mentored by [Dr. Muzammal Naseer](https://muzammal-naseer.netlify.app/).
 * My primary focus lies at the intersection of machine learning and computer vision, particularly specializing in multi-modal learning and self-supervised learning towards building robust and generalizable deep learning models. 
