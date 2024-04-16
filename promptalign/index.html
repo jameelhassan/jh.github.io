@@ -258,17 +258,24 @@
                         
                         <p class="equation-text">
                             At test time, multiple augmented views of the sample are passed through the CLIP model and the token 
-                            distribution statistics -- mean and variance -- are computed as in Eq.\ref{eq:test-stats}, where 
+                            distribution statistics -- mean and variance -- are computed as in Eq.\ref{eq:test-stats} and Eq.\ref{eq:test-stats2}, where 
                             \(\bigg({{X~}^p}_{l, \mathrm{x}}\) is the prompt token embeddings at layer 𝑙.
                         </p>
                         
                         <p class="equation">
                             \begin{align}
-                                {\mu}_{l}(\mathcal{T} ; {p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)}  {{X ~}^p}_{l, \mathrm{x}} \quad,
-                                {\sigma^2}_{l}(\mathcal{T} ; {p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)} \bigg({{X ~}^p}_{l, \mathrm{x}} - {\mu}_{l}(\mathcal{T} ; {p})\bigg)^2 ,
+                                {\mu}_{l}(\mathcal{T} ; {p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)}  {{X ~}^p}_{l, \mathrm{x}}
                                 \label{eq:test-stats}
                             \end{align}
                         </p>
+
+                        <p class="equation">
+                            \begin{align}
+                                {\sigma^2}_{l}(\mathcal{T} ; {p}) = \frac{1}{N_k} \sum_{\mathrm{x} \in \mathcal{H}(X)} \bigg({{X ~}^p}_{l, \mathrm{x}} - {\mu}_{l}(\mathcal{T} ; {p})\bigg)^2 ,
+                                \label{eq:test-stats2}
+                            \end{align}
+                        </p>
+                        
                         <p class="equation-text">
                             The distribution alignment loss is computed between the offline computed source data statistics and the test sample 
                             statistics across the transformer layers for all tokens as in Eq.\ref{eq:align-loss}. The resulting alignment loss from the 
