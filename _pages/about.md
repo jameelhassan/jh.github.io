@@ -18,7 +18,7 @@ redirect_from:
   gtag('config', 'G-W3Q11QFD2Y');
 </script>
 
-* PhD Resident at Johns Hopkins University, Maryland, USA, supervised by [Vishal Patel](https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en).
+* PhD student at Johns Hopkins University, Maryland, USA, supervised by [Vishal Patel](https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en).
 * Msc in Computer Vision, [MBZUAI](https://mbzuai.ac.ae/), UAE, supervised by [Salman Khan](https://scholar.google.com.pk/citations?user=M59O9lkAAAAJ&hl=en)
   and [Fahad Khan](https://scholar.google.com/citations?user=zvaeYnUAAAAJ&hl=en), mentored by [Muzammal Naseer](https://muzammal-naseer.netlify.app/).
 * My primary focus lies at the intersection of machine learning and computer vision, particularly specializing in multi-modal learning and self-supervised learning towards building robust and generalizable deep learning models. 
